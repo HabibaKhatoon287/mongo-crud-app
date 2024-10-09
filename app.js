@@ -20,7 +20,7 @@ app.use(express.json());
 // Import the User model
 const User = require('./models/userModel');
 
-// // Function to insert a new user into the database----> it working as a standalone function within the server initialization process.
+// // Function to insert a new user into the database----> its working as a standalone function within the server initialization process.
 // async function insert(){
 //     try {
 //         await User.create({
@@ -51,7 +51,7 @@ const User = require('./models/userModel');
 //     }
 // });
 
-// CREATE Operation - Insert a new user into the database (POST)
+// CREATE Operation - Insert a new user into the database
 app.post('/users', async (req, res) => {
     try {
         const { name, email } = req.body; // Get name and email from request body
@@ -136,7 +136,6 @@ app.put('/update/:id', async (req, res) => {
     }
 });
 
-// Start the server on port 3000
 http.listen(3000, function(){
     console.log('Server is running on port 3000');
 });
